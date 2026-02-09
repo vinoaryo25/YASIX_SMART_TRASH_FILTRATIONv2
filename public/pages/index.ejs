@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/root/style.css" />
+    <link rel="stylesheet" href="style/Index/style.css" />
+    <title>YASIX SMART TRASH FILTRATION</title>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-text">MEMUAT SISTEM...</div>
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="parent">
+      <!-- Navbar (div1) -->
+      <div class="div1 NAVBAR">
+        <div class="navbar-title">YASIX SMART TRASH FILTRATION</div>
+        <div class="navbar-subtitle">
+          SMK YADIKA 6 JATIWARINGIN<br />
+          SMART TRASH FILTRATION
+        </div>
+      </div>
+
+      <!-- Webcam Section (div2) -->
+      <div class="div2 WEBCAM">
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+      </div>
+
+      <!-- Organik Bar (div3) -->
+      <div class="div3 trash-bar ORGANIK_BAR" id="organikBar">
+        <div class="countdown-timer" id="organikTimer">3</div>
+        <div class="trash-icon">🌿</div>
+        <div class="trash-label">ORGANIK</div>
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            id="organikProgress"
+            style="width: 0%"
+          ></div>
+        </div>
+        <div class="percentage-text" id="organikPercent">0%</div>
+      </div>
+
+      <!-- B3 Bar (div4) -->
+      <div class="div4 trash-bar B3_BAR" id="b3Bar">
+        <div class="countdown-timer" id="b3Timer">3</div>
+        <div class="trash-icon">☣️</div>
+        <div class="trash-label">B3</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="b3Progress" style="width: 0%"></div>
+        </div>
+        <div class="percentage-text" id="b3Percent">0%</div>
+      </div>
+
+      <!-- Anorganik Bar (div5) -->
+      <div class="div5 trash-bar ANORGANIK_BAR" id="anorganikBar">
+        <div class="countdown-timer" id="anorganikTimer">3</div>
+        <div class="trash-icon">♻️</div>
+        <div class="trash-label">ANORGANIK</div>
+        <div class="progress-container">
+          <div
+            class="progress-bar"
+            id="anorganikProgress"
+            style="width: 0%"
+          ></div>
+        </div>
+        <div class="percentage-text" id="anorganikPercent">0%</div>
+      </div>
+    </div>
+
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Scripts -->
+    <script src="script/Index/script.js" type="application/javascript"></script>
+    <script
+      src="script/TeachableMachine/model.js"
+      type="application/javascript"
+    ></script>
+  </body>
+</html>
